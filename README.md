@@ -242,7 +242,7 @@ ur5-3dof-dynamics-pid/
 │       │   └── logger_node.py
 │       ├── config/controllers.yaml
 │       └── urdf/ur5_3dof_gz.urdf.xacro
-├── results/                        # Output PNGs and CSVs (git-ignored)
+├── results/                        # Output PNGs, CSVs Including simulations videos (git-ignored)
 └── docs/                           # Project spec and syllabus PDFs
 ```
 
