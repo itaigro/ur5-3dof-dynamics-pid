@@ -54,7 +54,7 @@ _JOINT_NAMES = [
     "wrist_3_joint",
 ]
 
-_DEFAULT_Q_TARGET = [math.pi / 2, -math.pi / 4, -math.pi / 2]   # pickup pose
+_DEFAULT_Q_TARGET = [math.pi / 2, -math.pi / 4, -math.pi / 2]   # side-reach pose
 _DEFAULT_KP = [20.0, 60.0, 20.0]
 _DEFAULT_KI = [ 1.0,  3.0,  1.0]
 _DEFAULT_KD = [ 4.0, 12.0,  4.0]

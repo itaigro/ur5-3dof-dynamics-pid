@@ -4,7 +4,7 @@ Mini-project for **Robots Motion Planning and Control** (362-2-5481),
 Spring 2026, Ben-Gurion University of the Negev. Lecturer: Prof. Amir
 Shapiro.
 
-**Students:** Itai Groisman (208394460), Daniel Zioni (ID TBD).
+**Students:** Itai Groisman (208394460), Daniel Zioni (208955351).
 
 ---
 
@@ -117,8 +117,8 @@ Gains used:
 | Ki | 1 | 3 | 1 |
 | Kd | 4 | 12 | 4 |
 
-Expected behaviour: arm moves from vertical to the pickup target in
-~3 s, with modest overshoot and peak torque around 75 N·m.
+Expected behaviour: arm moves from vertical to the side-reach target in
+~2.5 s, with modest overshoot and peak torque around 58 N·m.
 
 ### Controller B: Computed-torque control (CTC)
 
@@ -149,7 +149,7 @@ ros2 launch ur5_3dof_gz gazebo_ctc.launch.py \
 
 Joint targets are validated at launch time. Targets that would cause
 ground collisions or self-collisions are rejected with a clear error
-message. The default target is the pickup pose `[π/2, -π/4, -π/2]`.
+message. The default target is the side-reach pose `[π/2, -π/4, -π/2]`.
 
 ### Launch timeline (both controllers)
 
@@ -211,15 +211,8 @@ joint_state_broadcaster    joint_state_broadcaster/JointStateBroadcaster       a
 
 ## Report
 
-The LaTeX source for the project report lives in `report/`. Compile with
-
-```bash
-cd report
-latexmk -pdf main.tex
-```
-
-or upload the directory to Overleaf as a new project. See
-`report/README.md` for details.
+The project report is written in LaTeX and maintained separately in
+Overleaf; the compiled PDF is included with the course submission.
 
 ---
 
@@ -228,7 +221,6 @@ or upload the directory to Overleaf as a new project. See
 ```
 ur5-3dof-dynamics-pid/
 ├── README.md                       # this file
-├── PROJECT_JOURNAL.md              # design decisions and history
 ├── LICENSE
 ├── setup.py                        # installs the ur5_3dof Python package
 ├── src/ur5_3dof/                   # Core Python library
@@ -250,10 +242,6 @@ ur5-3dof-dynamics-pid/
 │       │   └── logger_node.py
 │       ├── config/controllers.yaml
 │       └── urdf/ur5_3dof_gz.urdf.xacro
-├── report/                         # Overleaf-ready LaTeX
-│   ├── main.tex
-│   ├── references.bib
-│   └── chapters/*.tex
 ├── results/                        # Output PNGs and CSVs (git-ignored)
 └── docs/                           # Project spec and syllabus PDFs
 ```
@@ -286,9 +274,7 @@ pip install -e . --break-system-packages
 ### Arm falls before t = 14 s
 
 The Gazebo pause is not always reliable on first launch (known
-`gz_ros2_control` issue). Kill everything and relaunch. If it keeps
-happening, see `PROJECT_JOURNAL.md` for details and the workaround
-options we considered.
+`gz_ros2_control` issue). Kill everything and relaunch.
 
 ### Custom q_target rejected at launch
 

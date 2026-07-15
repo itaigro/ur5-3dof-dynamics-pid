@@ -13,7 +13,7 @@ Step input — this is the whole point of computed torque.
 Expected: clean monotonic motion, settling in ~1.5 s, no overshoot.
 
 Usage:
-  # Default target (pickup pose)
+  # Default target (side-reach pose)
   ros2 launch ur5_3dof_gz gazebo_ctc.launch.py
 
   # Custom target — joint angles in radians

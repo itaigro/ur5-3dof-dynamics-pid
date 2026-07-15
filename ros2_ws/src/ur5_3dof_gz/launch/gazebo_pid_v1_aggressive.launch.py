@@ -39,7 +39,7 @@ from launch.substitutions import Command
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-_Q_TARGET = [math.pi / 2, -math.pi / 4, -math.pi / 2]   # pickup pose
+_Q_TARGET = [math.pi / 2, -math.pi / 4, -math.pi / 2]   # side-reach pose
 _PREFIX   = "gazebo_pid_v1_aggressive"
 
 

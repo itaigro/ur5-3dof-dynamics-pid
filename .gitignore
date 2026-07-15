@@ -16,6 +16,7 @@ env/
 results/*
 !results/*.png
 !results/*.csv
+!results/*.webm
 !results/.gitkeep
 
 # --- LaTeX build artifacts ---
