@@ -14,6 +14,8 @@ env/
 
 # --- Simulation outputs ---
 results/*
+!results/*.png
+!results/*.csv
 !results/.gitkeep
 
 # --- LaTeX build artifacts ---
